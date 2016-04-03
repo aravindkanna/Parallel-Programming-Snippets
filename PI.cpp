@@ -49,3 +49,24 @@ int main()
 	cout << pi << endl;
 	return 0;
 }
+
+/*int main()
+{
+	double x = 0.0, sum = 0.0, pi;
+	step = 1.0/(double) num_steps;
+
+	omp_set_num_threads(100000);
+	int id = 0;
+
+	#pragma omp parallel private(id)
+	{
+		id = omp_get_thread_num();
+		x = (id+0.5)*step;
+		#pragma omp critical
+			sum = sum + 4.0/(1.0+x*x);
+		pi = step*sum;
+	}
+	
+	cout << pi << endl;
+	return 0;
+}*/
